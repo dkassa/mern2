@@ -32,7 +32,7 @@ const LoginPageComponent = ({ loginUserApiRequest,reduxDispatch, setReduxUserSta
                 reduxDispatch(setReduxUserState(res.userLoggedIn));
             }
 
-            if (res.success === "user logged in" && !res.userLoggedIn.isAdmin) window.location.assign('/user') 
+            if (res.success === "user logged in" && !res.userLoggedIn.isAdmin) navigate('/user') 
             else window.location.assign('/admin/orders')
 
         })
